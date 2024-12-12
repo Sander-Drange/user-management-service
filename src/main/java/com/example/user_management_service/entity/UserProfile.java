@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "user_profiles")
 public class UserProfile {
     @Id
-    private String userId;  // This will match the ID from Auth Service
+    private String userId;
 
     private String firstName;
     private String lastName;
@@ -27,7 +27,6 @@ public class UserProfile {
 
     @Temporal(TemporalType.TIMESTAMP)
     private java.util.Date createdAt;
-
     @Temporal(TemporalType.TIMESTAMP)
     private java.util.Date updatedAt;
 

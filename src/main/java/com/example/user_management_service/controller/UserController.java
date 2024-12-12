@@ -9,15 +9,18 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
-@RequiredArgsConstructor
 public class UserController {
+
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity createUserProfile(
+    public ResponseEntity<UserProfileResponse> createUserProfile(
             @RequestHeader("X-User-ID") String userId,
             @RequestBody UserProfileRequest request
     ) {
         return ResponseEntity.ok(userService.createUserProfile(userId, request));
+    }
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 }
