@@ -46,11 +46,12 @@
 			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
 
-		<!-- Spring Cloud -->
+		<!-- Spring Cloud
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
 		</dependency>
+		-->
 
 		<!-- Database -->
 		<dependency>
